@@ -1,5 +1,6 @@
 package fr.mak.atelierstage.util.handlers;
 
+import fr.mak.atelierstage.init.BlocksMod;
 import fr.mak.atelierstage.init.ItemsMod;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -17,10 +18,10 @@ public class RegistryHandler {
     }
 
 
-    /*@SubscribeEvent
+    @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event){
-        event.getRegistry().registerAll();
-    }*/
+        event.getRegistry().registerAll(BlocksMod.BLOCKS.toArray(new Block[0]));
+    }
 
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event){
@@ -29,11 +30,11 @@ public class RegistryHandler {
                 ((IHasModel)item).registerModels();
             }
         }
-        /*for(Block block : ){
+        for(Block block : BlocksMod.BLOCKS ){
             if (block instanceof IHasModel){
                 ((IHasModel)block).registerModels();
             }
-        }*/
+        }
 
     }
 

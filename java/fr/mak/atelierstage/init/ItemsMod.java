@@ -1,13 +1,9 @@
 package fr.mak.atelierstage.init;
 
 import fr.mak.atelierstage.Global;
-import fr.mak.atelierstage.items.Pokeball;
-import fr.mak.atelierstage.items.Tyrolium;
-import fr.mak.atelierstage.items.TyroliumArmor;
-import fr.mak.atelierstage.items.TyroliumSword;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemSword;
+import fr.mak.atelierstage.items.*;
+import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.*;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.ArrayList;
@@ -25,8 +21,15 @@ public class ItemsMod {
 
     // Mon épée
     public static final ItemSword TYROLIUM_SWORD = new TyroliumSword();
+    public static final ItemPickaxe TYROLIUM_PICKAXE = new TyroliumPickaxe();
+    public static final ItemTool TYROLIUM_AXE = new TyroliumAxe();
+    public static final ItemSpade TYROLIUM_SHOVEL = new TyroliumShovel();
+    public static final ItemHoe TYROLIUM_HOE = new TyroliumHoe();
 
-    public static final ItemArmor TYROLIUM_HELMET = new TyroliumArmor();
+    public static final ItemArmor TYROLIUM_HELMET = new TyroliumArmor(EntityEquipmentSlot.HEAD);
+    public static final ItemArmor TYROLIUM_CHESTPLATE = new TyroliumArmor(EntityEquipmentSlot.CHEST);
+    public static final ItemArmor TYROLIUM_BOOTS = new TyroliumArmor(EntityEquipmentSlot.FEET);
+    public static final ItemArmor TYROLIUM_LEGGINGS = new TyroliumArmor(EntityEquipmentSlot.LEGS);
 
 
 }
